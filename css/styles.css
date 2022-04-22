@@ -3,3 +3,41 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+.info-card {
+    /*Remove border*/
+    /* border: 1px solid red !important; */
+    /*change the width on info cards*/
+    width: 400px;
+    text-align: center;
+}
+
+/*Anything that is an info card and an icon*/
+.info-card i {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+}
+
+/*Need to find the parent container for flex box*/
+/*Initialize flexbox*/
+.flex-items {
+    display: flex;
+    /*Adjust boxes on a horizontal context*/
+    justify-content: center;
+    /*Center boxes on the vertical context*/
+    align-items: center;
+    flex-wrap: wrap;
+}
