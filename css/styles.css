@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     /* box-sizing: border-box; */
+}
+
+img {
+    width: 100%;
+}
+
+.text-primary {
+    color: #28a745;
 }
 
 .hero .content * {
@@ -20,6 +41,17 @@ body {
     color: white;
 }
 
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: auto;
+}
+
 .hero .content h2 {
     font-size: 3rem;
 }
@@ -28,17 +60,23 @@ h1, h2 {
     font-weight: 300;
     line-height: 1.2;
 }
-/* .navbar {
+
+.navbar .logo {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.navbar {
     flex-direction: column;
     height: 120px;
     padding: 20px;
-} */
+}
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     opacity: 0.8;
     width: 100%;
@@ -48,6 +86,27 @@ h1, h2 {
     padding: 0 30px;
     transition: 0.5s ease-in;
     z-index: 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0 3px;
+}
+
+.navbar a {
+    color: white;
 }
 
 .hero .content {
@@ -99,8 +158,57 @@ h1, h2 {
     padding: 20px;
 }
 
+div.column {
+    background-color: #28a745;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+}
+
+a.btn.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary, .bg-primary{
+    background: #28a745;
+    color: white;
+}
+
+.flex-columns .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: column;
+    flex: 1;
+}
+
 .flex-columns img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.flex-columns .column, .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+}
+
+.flex-columns .column .column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
 }
